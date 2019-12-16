@@ -45,11 +45,15 @@ Access tomcat application from browser on prot 8090
    find / -name context.xml
    ```
 1. above command gives 3 context.xml files. edit only webapps and  comment <!-- & -->  `Value ClassName` field on files which are under webapp directory. 
+```
 /opt/apache-tomcat-8.5.50/webapps/manager/META-INF/context.xml
 /opt/apache-tomcat-8.5.50/webapps/host-manager/META-INF/context.xml
+
 ##comment the below line as shown
+
 <!--  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
+	 ```
 
 After that restart tomcat services to effect these changes
    ```sh 
